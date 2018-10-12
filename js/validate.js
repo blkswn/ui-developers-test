@@ -24,7 +24,19 @@ function CheckForm(e){
 	
 	//message
 	else{
-		sweetAlert('Success! Good job!');
+		if(form.email.value){
+		sweetAlert({title: 'All done!',
+		html:
+        'Email was sen to: <pre><code>' +
+          JSON.stringify(form.email.value) +
+        '</code></pre>',
+		confirmButtonText: 'Okay!'
+		
+		
+		
+		
+		});
+	}
 	}
 	
 	
